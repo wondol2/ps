@@ -10,7 +10,6 @@ using namespace std;
 #endif
 
 int a, N;
-
 int get_max_idx(int num){
     int idx = 1;
     while(num > 0){
@@ -22,48 +21,38 @@ int get_max_idx(int num){
 void solve(){
     cin >> a >> N;
 
-    int dp[1000001][2] = {0,};
-
     int Nidx = get_max_idx(N);
-    vector<int> candidates;
-    for(int i=0; i<Nidx; i++){
-        if(i*a < Nidx)
-            dp[i][0] = i*a;
-        if(i >= 10 && (i % 10 != 0)){
-            int idx = get_max_idx(i);
-            idx/=10;
-            int temp = (idx*(i%10) + i/10);
-            if (temp < Nidx)
-                dp[i][1] = temp;
-        }
-    }
-
-    int visit[1000001] = {0};
-    int que[10000001][2];
+    vector<bool> visit(1000001, false);
+    vector<pair<int, int>> que; // num, lv
     int front = 0, rear = 0;
-    que[rear][0] = 1;
-    que[rear++][1] = 0;
+    que.push_back({1, 0});
+    rear++;
     int ans = 0;
     while(front != rear){
-        int num = que[front][0];
-        int cnt = que[front++][1];
+        int num = que[front].first;
+        int lv = que[front++].second;
+        if(visit[num] == true) continue;
+
         if (num == N){
-            ans = cnt;
+            ans = lv;
             break;
         }
-        if(visit[num] == 1) continue;
-        visit[num] = 1;
 
-        if (rear < 10000000 && visit[dp[num][0]] == 0 && dp[num][0] > 0){
-            que[rear][0] = dp[num][0];
-            que[rear++][1] = cnt+1;
+        visit[num] = true;
 
+        long long temp = (long long) num*a;
+        if(temp < Nidx && visit[temp] == false){
+            que.push_back({temp, lv+1}); rear++;
         }
-        if (rear < 10000000 && visit[dp[num][1]] == 0 && dp[num][1] > 0){
-            que[rear][0] = dp[num][1];
-            que[rear++][1] = cnt+1;
+        if(num >= 10 && (num % 10 != 0)){
+            int idx = get_max_idx(num) / 10;
+            temp = (idx*(num%10) + num/10);
+            if (temp < Nidx && visit[temp] == false){
+                que.push_back({temp, lv+1}); rear++;
+            }
         }
     }
+
     if (ans != 0) cout << ans << '\n';
     else cout << -1 << '\n';
 }
