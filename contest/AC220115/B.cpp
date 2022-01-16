@@ -9,9 +9,20 @@ using namespace std;
 
 
 void solve(){
-    unsigned long long N, R;
-    cin >> N >> R;
-    cout << (N+1)+2*(R-1) << '\n';
+    int N, H[100001], stand=0;
+    cin >> N;
+    for (int i=0; i<N; i++){
+        cin >> H[i];
+    }
+    for (int i=1; i<N; i++){
+        if(H[stand] < H[i]){
+            stand = i;
+        }
+        else{
+            break;
+        }
+    }
+    cout << H[stand] << '\n';
 }
 
 int main(){

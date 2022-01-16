@@ -9,7 +9,10 @@ using namespace std;
 
 
 void solve(){
-
+    int n;
+    cin >> n;
+    int a = n%10 + (n/10)%10 + n/100;
+    cout << a*111 << '\n';
 }
 
 int main(){
@@ -17,7 +20,7 @@ int main(){
     cin.tie(0);
 
     int t=1;
-    cin >> t;
+    // cin >> t;
     while(t--){
         solve();
     }
