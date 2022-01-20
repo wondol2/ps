@@ -9,7 +9,17 @@ using namespace std;
 
 
 void solve(){
-
+    char s[60];
+    cin >> s;
+    int arr[27] = {0,};
+    for(int i=0; s[i]; i++){
+        arr[s[i]-'a'] ++;
+    }
+    for(int i=0; i<26; i++){
+        for(int j=0; j<arr[i]; j++)
+            cout << char(i + 'a');
+    }
+    cout << '\n';
 }
 
 int main(){

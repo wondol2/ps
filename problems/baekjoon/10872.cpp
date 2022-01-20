@@ -7,9 +7,16 @@ using namespace std;
 #define debug(x)
 #endif
 
+int fac(int n){
+    if(n==0) return 1;
+    return n*fac(n-1);
+}
 
 void solve(){
+    int N;
+    cin >> N;
 
+    cout << fac(N) << "\n";
 }
 
 int main(){
@@ -17,7 +24,7 @@ int main(){
     cin.tie(0);
 
     int T=1;
-    cin >> T;
+    // cin >> T;
     while(T--){
         solve();
     }

@@ -7,8 +7,17 @@ using namespace std;
 #define debug(x)
 #endif
 
+// https://codeforces.com/contest/1626/problem/C
 
 void solve(){
+    int n;
+    cin >> n;
+    vector<int> k(n);
+    vector<int> h(n);
+    for(int i=0; i<n; i++) cin >> k[i];
+    for(int i=0; i<n; i++) cin >> h[i];
+
+    
 
 }
 

@@ -9,9 +9,25 @@ using namespace std;
 
 
 void solve(){
-    unsigned long long N, R;
-    cin >> N >> R;
-    cout << (N+1)+2*(R-1) << '\n';
+    int a = 1, b = 2;
+    vector<int> v1 = {1,2,3};
+    vector<int> v2 = {4,5,6,7};
+    set<int> s = {1,1,2,3,4,1,5,1,2,3, 7, 11, 13};
+    vector<int> v3 = {1,1,2,3,4,1,5,1,2,3, 7, 11, 13};
+    swap(v1,v2);
+    debug(v1)
+    debug(v2)
+    debug(s)
+    sort(v3.begin(), v3.end());
+    debug(v3)
+
+    cout << *lower_bound(v3.begin(), v3.end(), 2) << '\n';
+    cout << lower_bound(v3.begin(), v3.end(), 2) - v3.begin() << '\n';
+    cout << *upper_bound(v3.begin(), v3.end(), 2) << '\n';
+    cout << upper_bound(v3.begin(), v3.end(), 2) - v3.begin() << '\n';
+    
+    // cout << *s.lower_bound(7) << '\n';
+    // cout << a << " " << b << '\n';
 }
 
 int main(){

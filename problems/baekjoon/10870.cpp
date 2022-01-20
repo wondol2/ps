@@ -7,9 +7,17 @@ using namespace std;
 #define debug(x)
 #endif
 
+int fibo(int n){
+    if(n==0) return 0;
+    if(n==1) return 1;
+    return fibo(n-1) + fibo(n-2);
+}
 
 void solve(){
+    int N;
+    cin >> N;
 
+    cout << fibo(N) << "\n";
 }
 
 int main(){
@@ -17,7 +25,7 @@ int main(){
     cin.tie(0);
 
     int T=1;
-    cin >> T;
+    // cin >> T;
     while(T--){
         solve();
     }
