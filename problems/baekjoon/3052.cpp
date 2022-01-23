@@ -9,12 +9,18 @@ using namespace std;
 
 
 void solve(){
-
+    int a, cnt=0;
+    set<int> s;
+    for(int i=0; i<10; ++i){
+        cin >> a;
+        s.insert(a%42);
+    }
+    cout << s.size() << "\n";
 }
 
 int main(){
     ios::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
 
     int T=1;
     // cin >> T;

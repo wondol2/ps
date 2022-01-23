@@ -9,15 +9,18 @@ using namespace std;
 
 
 void solve(){
-
+    int L, R, K; cin >> L >> R >> K;
+    int ans = ((R+1)/2) - (L/2) <= K;
+    if(ans || (L>1 && (L&1) && (L==R))) cout << "YES\n";
+    else cout << "NO\n";
 }
 
 int main(){
     ios::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
 
     int T=1;
-    // cin >> T;
+    cin >> T;
     while(T--){
         solve();
     }

@@ -9,12 +9,16 @@ using namespace std;
 
 
 void solve(){
-
+    int H, W, K; cin >> H >> W >> K;
+    int A[200001], B[200001];
+    for(int i=0; i<H; ++i) cin >> A[i];
+    for(int i=0; i<W; ++i) cin >> B[i];
+    
 }
 
 int main(){
     ios::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
 
     int T=1;
     // cin >> T;

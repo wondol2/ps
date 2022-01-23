@@ -9,12 +9,17 @@ using namespace std;
 
 
 void solve(){
+    int N, M; cin >> N >> M;
 
+    cout << N * (M%10) << "\n";
+    cout << N * ((M/10)%10) << "\n";
+    cout << N * ((M/100)%10) << "\n";
+    cout << N * M << "\n";
 }
 
 int main(){
     ios::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
 
     int T=1;
     // cin >> T;

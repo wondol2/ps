@@ -76,6 +76,16 @@ int gcd(int a, int b){
     return a;
 }
 
+double Leibniz_series(){
+    double pi = 0;
+    for(int i=1; i<1000000000; i+=4){
+        pi += (double)4/((double)i);
+        pi -= (double)4/((double)(i+2));
+    }
+    return pi;
+    return M_PI; // .............
+}
+
 void modulo_arithmetics(){
     // (a+b)%m == ((a%m)+(b%m))%m
     // (a*b)%m == ((a%m)*(b%m))%m

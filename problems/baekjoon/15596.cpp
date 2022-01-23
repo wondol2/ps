@@ -7,6 +7,11 @@ using namespace std;
 #define debug(x)
 #endif
 
+long long sum(std::vector<int> &a){
+    long long ans = 0;
+    for(auto x : a) ans += x;
+    return ans;
+}
 
 void solve(){
 
@@ -14,7 +19,7 @@ void solve(){
 
 int main(){
     ios::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
 
     int T=1;
     // cin >> T;
