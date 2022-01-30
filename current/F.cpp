@@ -7,9 +7,19 @@ using namespace std;
 #define debug(x)
 #endif
 
+const int MOD = 998244353;
 
 void solve(){
-    
+    int N, M; 
+    cin >> N >> M;
+    int dp[N]{};
+    dp[0] = M;
+    dp[1] = M*M;
+
+    for(int i=2; i<N; ++i){
+        dp[i] = dp[i-1];
+    }
+
 }
 
 

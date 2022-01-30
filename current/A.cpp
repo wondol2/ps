@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    long long N; cin >> N;
+    if(N >= INT_MIN && N <= INT_MAX){
+        cout << "Yes\n";
+    }
+    else{
+        cout << "No\n";
+    }
 }
 
 

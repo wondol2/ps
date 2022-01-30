@@ -75,7 +75,9 @@ int gcd(int a, int b){
     }
     return a;
 }
-
+int gcd2(int a, int b){
+    return b ? gcd2(b, a%b) : a;
+}
 double Leibniz_series(){
     double pi = 0;
     for(int i=1; i<1000000000; i+=4){
@@ -108,7 +110,7 @@ int pw(int a, int b, int m){
     }
     if(b & 1){
         int t = pw(a, (b-1)/2, m);
-        return (long long) t*t*a % m;
+        return (long long) (t*t%m)*a % m;
     }
     else{
         int t = pw(a, b/2, m);
