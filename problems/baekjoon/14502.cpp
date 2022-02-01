@@ -8,12 +8,12 @@ using namespace std;
 #endif
 
 struct node{int y;int x;};
-int dx[4]={1,1,-1,-1};
-int dy[4]={-1,1,-1,1};
+int dx[4]={1,-1,0,0};
+int dy[4]={0,0,1,-1};
 
 void solve(){
     int N, M; cin >> N >> M;
-    int arr[N][M];
+    int arr[N][M], brr[N][M];
     queue<node> virus;
     for(int i=0; i<N; ++i){
         for(int j=0; j<M; ++j){
@@ -27,36 +27,37 @@ void solve(){
     int ans = 0;
 
     for(int i=0; i<N; ++i){
-        for(int j=0; j<N; ++j){
+        for(int j=0; j<M; ++j){
             if(arr[i][j] == 0){
                 arr[i][j] = 1;
                 for(int ii=i; ii<N; ++ii){
-                    for(int jj=0; jj<N; ++jj){
-                        if((i!=ii || j!=jj) && arr[ii][jj] == 0){
+                    for(int jj=0; jj<M; ++jj){
+                        if(ii==i && jj <= j) continue;
+                        if(arr[ii][jj] == 0){
                             arr[ii][jj] = 1;
                             for(int iii=ii; iii<N; ++iii){
-                                for(int jjj=0; jjj<N; ++jjj){
-                                    if((i!=iii || j!=jjj) && (ii!=iii || jj!=jjj) && arr[iii][jjj] == 0){
+                                for(int jjj=0; jjj<M; ++jjj){
+                                    if(iii==ii && jjj <= jj) continue;
+                                    if(arr[iii][jjj] == 0){
                                         arr[iii][jjj] = 1;
-                                        int brr[N][M];
+
                                         for(int a=0; a<N; ++a){
                                             for(int b=0; b<M; ++b){
                                                 brr[a][b] = arr[a][b];
                                             }
                                         }
                                         queue<node> q = virus;
-
                                         while(!q.empty()){
                                             node n = q.front();
+                                            
                                             for(int z=0; z<4; ++z){
-                                                int newx=n.x+dx[z], newy=n.y+dy[z];
-                                                if(newx<0 || newx>=N || newy<0 || newy>=M) continue;
-                                                if(brr[newx][newy] == 0){
-                                                    brr[newx][newy]=2;
-                                                    q.push({newx,newy});
+                                                int newy=n.y+dy[z], newx=n.x+dx[z];
+                                                if(newy<0 || newy>=N || newx<0 || newx>=M) continue;
+                                                if(brr[newy][newx] == 0){
+                                                    brr[newy][newx]=2;
+                                                    q.push({newy,newx});
                                                 }
                                             }
-
                                             q.pop();
                                         }
                                         int cnt = 0;

@@ -44,7 +44,7 @@ void solve(){
                 dp[i] = max(dp[i], dp[j]+1);
         }
     }
-    cout << *max_element(dp, dp+N+1) << "\n";asd
+    cout << *max_element(dp, dp+N+1) << "\n";
 }
 
 
