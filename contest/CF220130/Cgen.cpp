@@ -7,9 +7,18 @@ using namespace std;
 #define debug(x)
 #endif
 
+#define uid(a,b) uniform_int_distribution<int>(a,b)(rng)
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 void solve(){
-    
+    int T = 1;
+    int a=1, b=1;
+
+    a = uid(1,20), b = uid(1, 20);
+    if(a >= b) swap(a,b);
+
+    cout << T << "\n";
+    cout << a << " " << b << "\n";
 }
 
 

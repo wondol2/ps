@@ -118,6 +118,10 @@ int pw(int a, int b, int m){
     }
 }
 
+long long ceil_div(long long a, long long b){
+    return a/b + ((a^b) > 0 && a%b != 0);
+}
+
 void solve(){
     int NUM = 15;
     // for(int i=1; i<=NUM; ++i)

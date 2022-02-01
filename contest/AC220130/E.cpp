@@ -10,11 +10,9 @@ using namespace std;
 
 void solve(){
     int N, M; cin >> N >> M;
-    int H[N];
+    long long H[N];
 
     for(int i=0; i<N; ++i) cin >> H[i];
-    
-    int happy[N]{};
     
     vector<int> v[N];
     for(int i=0; i<M; ++i){
@@ -24,40 +22,35 @@ void solve(){
         v[a].push_back(b);
         v[b].push_back(a);
     }
+    
+    vector<long long> happy(N, LONG_LONG_MIN);
 
     queue<int> q;
     q.push(0);
+    happy[0] = 0;
+
     while(!q.empty()){
         int num = q.front();
-        // debug(num)
         for(int i=0; i<(int) v[num].size(); ++i){
             int candi = v[num][i];
-            int temp = -1;
-            if(H[num] > H[candi]){
-                if(!happy[candi] || happy[candi] < happy[num] + H[num] - H[candi]){
-                    temp = happy[num] + H[num] - H[candi];
-                }
-            }
-            else if(H[num] < H[candi]){
-                if(!happy[candi] || happy[candi] < happy[num] + 2*(H[num] - H[candi])){
-                    temp = happy[num] + 2*(H[num] - H[candi]);
+            if(H[num] >= H[candi]){
+                if(happy[candi] < happy[num] + H[num] - H[candi]){
+                    happy[candi] = happy[num] + H[num] - H[candi];
+                    q.push(candi);
                 }
             }
             else{
-                if(!happy[candi] || happy[candi] < happy[num]){
-                    temp = happy[num];
+                if(happy[candi] < happy[num] - 2*(H[candi]-H[num])){
+                    happy[candi] = happy[num] - 2*(H[candi]-H[num]);
+                    q.push(candi);
                 }
-            }
-            if(temp != -1){
-                happy[candi] = temp;
-                q.push(candi);
             }
         }
 
         q.pop();
     }
 
-    cout << max(0, *max_element(happy, happy+N)) << "\n";
+    cout << *max_element(happy.begin(), happy.end()) << "\n";
 }
 
 

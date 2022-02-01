@@ -9,14 +9,21 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    N = 1000 - N;
+    int arr[6] = {500, 100, 50, 10, 5, 1};
+    int ans = 0;
+    for(int i=0; i<6; ++i){
+        ans += N / arr[i];
+        N %= arr[i];
+    }
+    cout << ans << "\n";
 }
 
 
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    cin.exceptions(cin.failbit);
     int T=1;
     // cin >> T;
     while(T--){ solve(); }

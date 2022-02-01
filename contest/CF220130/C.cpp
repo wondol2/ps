@@ -30,7 +30,13 @@ void solve(){
     for(int i=msb; i>=0; --i){
         int aa = ((a >> (i-1)) & 1), bb = ((b >> (i-1)) & 1);
         if(aa > bb){
-            if(((b >> i) & 1) && !((a >> i) & 1)){
+            int j = i;
+            int flag = 0;
+            while(j < 32 && (((b >> j) & 1) && ((a >> j) & 1))){
+                ++j;
+            }
+
+            if(((b >> j) & 1) && !((a >> j) & 1)){
                 if((1 << i) - getright(a,i) > getright(a,i) - getright(b,i)){
                     if(getright(a,i) >= getright(b,i)){
                         
