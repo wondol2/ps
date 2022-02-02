@@ -30,6 +30,7 @@ void num_exec(){
 
 void solve(){
     int N, K; cin >> N >> K;
+    K = min(K, 12*N); // very important
     for(int i=1; i<=N; ++i) cin >> b[i];
     for(int i=1; i<=N; ++i) cin >> c[i];
     for(int i=1; i<=N; ++i) a[i] = d[b[i]];
