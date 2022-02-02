@@ -8,7 +8,6 @@ using namespace std;
 #endif
 
 // Need to try one more
-// tree's diameter (radius)
 
 const int NUM = 100001;
 struct node{int v; int d;};
@@ -45,32 +44,13 @@ pair<int,int> sol(int root){
 
 void solve(){
     cin >> N;
-    for(int i=0; i<N; ++i){
-        int vertex; cin >> vertex;
-        while(true){
-            int v; cin >> v;
-            if(v == -1) break;
-            int d; cin >> d;
-            graph[vertex].push_back({v, d});
-        }
-        
-    }
 
-    int vis[N+1]{};
-    queue<int> q;
-    q.push(1);
-    vis[1] = 1;
-    while(!q.empty()){
-        int num = q.front();
-        for(int i=0; i<(int) graph[num].size(); ++i){
-            node n = graph[num][i];
-            if(!vis[n.v]){
-                q.push(n.v);
-                vis[n.v]=1;
-                tree[num].push_back(n);
-            }
-        }
-        q.pop();
+    for(int i=0; i<N-1; ++i){
+        int p; cin >> p;
+        int c; cin >> c;
+        int d; cin >> d;
+
+        tree[p].push_back({c,d});
     }
 
     cout << sol(1).first << "\n";
