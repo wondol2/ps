@@ -122,6 +122,15 @@ long long ceil_div(long long a, long long b){
     return a/b + ((a^b) > 0 && a%b != 0);
 }
 
+void print_bits(int n){
+    for(int i=31; i>=0; --i){
+        cout << ((n>>i) & 1);
+        if(i%8 == 0) cout << " ";
+    }
+
+    cout << '\n';
+}
+
 void solve(){
     int NUM = 15;
     // for(int i=1; i<=NUM; ++i)
