@@ -7,45 +7,30 @@ using namespace std;
 #define debug(x)
 #endif
 
-// unsolved
 
 void solve(){
     int N, S; cin >> N >> S;
     int arr[N];
     for(int i=0; i<N; ++i) cin >> arr[i];
 
-    if(S > accumulate(arr, arr+N, 0)){
-        cout << 0 << "\n";
-        return;
-    }
+    int ans = N+1;
+    int sum = arr[0];
 
-    int s = 0, e = N;
-
-    while(s < e){
-        int mid = (s-e)/2+e;
-
-        int sum = accumulate(arr, arr+mid, 0);
-
-        int flag = 0;
-        for(int i=mid; i<N; ++i){
-            if(sum == S){
-                flag = 1;
-                break;
-            }
-
-            sum += arr[i];
-            sum -= arr[i-mid];
+    for(int i=0,j=1; i<N&&j<=N;){
+        if(j<N && sum < S){
+            sum += arr[j++];
         }
-
-        if(flag == 1){
-            e = mid-1;
+        else if(sum >= S){
+            ans = min(ans, j-i);
+            sum -= arr[i++];
         }
-        else{
-            s = mid;
+        else{ // j>=N && sum < S
+             break;
         }
     }
 
-    cout << s << "\n";
+    if(ans == N+1) ans = 0;
+    cout << ans << "\n";
 }
 
 
