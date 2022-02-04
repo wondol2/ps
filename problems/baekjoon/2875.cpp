@@ -9,7 +9,16 @@ using namespace std;
 
 
 void solve(){
-    
+    int N, M, K; cin >> N >> M >> K;
+    int ans = 0;
+
+    for(int i=1; i*2<=N && i<=M; ++i){
+        if(N-2*i + M-i < K){
+            break;
+        }
+        ++ans;
+    }
+    cout << ans << "\n";
 }
 
 

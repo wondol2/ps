@@ -9,7 +9,10 @@ using namespace std;
 
 
 void solve(){
-    
+    int a, b, c, d; cin >> a >> b >> c >> d;
+    int sum = a+b+c+d;
+
+    cout << sum/60 << "\n" << sum%60 << "\n";
 }
 
 

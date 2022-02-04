@@ -9,7 +9,11 @@ using namespace std;
 
 
 void solve(){
-    
+    int D, H, W; cin >> D >> H >> W;
+
+    double val = D / sqrt(H*H+W*W);
+
+    cout << (int)(val*H) << " " << (int)(val*W) << "\n";
 }
 
 

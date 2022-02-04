@@ -11,17 +11,25 @@ using namespace std;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const long long M = 1000000000000000000;
-
 void solve(){
     int T = 1;
     long long a=1, b=1;
 
-    a = uid(-M,M), b = uid(-M, M);
-    // a = uid(0,30), b = uid(0, 30);
-    // if(a >= b) swap(a,b);
-
-    cout << T << "\n";
-    cout << a << " " << b << "\n";
+    a = uid(0, 9);
+    if(a<5) cout << "-";
+    for(int i=0; i<1000; ++i){
+        a = uid(0, 10);
+        cout << a;
+    }
+    cout << " ";
+    
+    a = uid(0, 9);
+    if(a<5) cout << "-";
+    for(int i=0; i<1000; ++i){
+        a = uid(0, 10);
+        cout << a;
+    }
+    cout << "\n";
 }
 
 

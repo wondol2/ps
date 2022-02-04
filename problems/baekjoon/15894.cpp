@@ -9,7 +9,8 @@ using namespace std;
 
 
 void solve(){
-    
+    long long N; cin >> N;
+    cout << N*4 << "\n";
 }
 
 

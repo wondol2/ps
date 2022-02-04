@@ -9,7 +9,10 @@ using namespace std;
 
 
 void solve(){
-    
+    int a, b; cin >> a >> b;
+
+    cout << "You get " << a/b << " piece(s) and your dad gets " 
+         << a%b << " piece(s)." << "\n";
 }
 
 
@@ -18,7 +21,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

@@ -9,7 +9,15 @@ using namespace std;
 
 
 void solve(){
-    
+    int ans = 0, minval = 100000;
+    for(int i=0; i<7; ++i){
+        int num; cin >> num;
+        if(!(num&1)){
+            ans += num;
+            minval = min(minval, num);
+        }
+    }
+    cout << ans << " " << minval << "\n";
 }
 
 
@@ -18,7 +26,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

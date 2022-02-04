@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int a, b, c, d; cin >> a >> b >> c >> d;
+
+    cout << min(b+c, a+d) << "\n";
 }
 
 

@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    if(N) cout << "Leading the Way to the Future\n";
+    else cout << "YONSEI\n";
 }
 
 

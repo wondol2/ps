@@ -9,7 +9,16 @@ using namespace std;
 
 
 void solve(){
-    
+    int by, bx; cin >> by >> bx;
+    int dy, dx; cin >> dy >> dx;
+    int jy, jx; cin >> jy >> jx;
+
+    int b = max(abs(jy-by), abs(jx-bx));
+    int d = abs(jy-dy) + abs(jx-dx);
+
+    if(b < d) cout << "bessie\n";
+    else if(d < b) cout << "daisy\n";
+    else cout <<"tie\n";
 }
 
 

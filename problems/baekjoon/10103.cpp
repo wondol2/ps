@@ -9,7 +9,16 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    int a = 100, b = 100;
+
+    while(N--){
+        int x, y; cin >> x >> y;
+
+        if(x < y) a-=y;
+        if(x > y) b-=x;
+    }
+    cout << a << "\n" << b << "\n";
 }
 
 

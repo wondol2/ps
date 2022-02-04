@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    int ans = 0;
+    for(int i=0; i<5; ++i){
+        int num; cin >> num;
+        if(num == N) ++ans;
+    }
+    cout << ans << "\n";
 }
 
 

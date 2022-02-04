@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+
+    for(int i=0; i<9; ++i){
+        int num; cin >> num;
+        N-=num;
+    }
+    cout << N << "\n";
 }
 
 

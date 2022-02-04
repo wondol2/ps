@@ -9,7 +9,12 @@ using namespace std;
 
 
 void solve(){
-    
+    double pi = 3.141592;
+
+    int a, b; cin >> a >> b;
+
+    cout.precision(6);
+    cout << fixed << a*2 + b*pi*2 << "\n";
 }
 
 

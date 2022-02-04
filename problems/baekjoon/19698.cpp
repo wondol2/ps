@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int N, W, H, L; cin >> N >> W >> H >> L;
+
+    cout << min(N, (W/L) * (H/L)) << "\n";
 }
 
 

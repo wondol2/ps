@@ -37,6 +37,7 @@ bool is_prime(int n){
             return false;
     return true;
 }
+
 void sieve_of_eratosthenes(int n){
     // O(nlog(log(n))) == almost linear
     vector<int> prime(n+1, 1);
@@ -61,22 +62,8 @@ vector<int> sieve(int n){
     return pr;
 }
 
-int gcd1(int a, int b){
-    // log(max(a,b))
-    if(a<b) swap(a,b);
-    if(b==0) return a;
-    return gcd1(a%b, b);
-}
-int gcd(int a, int b){
-    if(a<b) swap(a,b);
-    while(b>0){
-        a = a%b;
-        swap(a,b);
-    }
-    return a;
-}
-int gcd2(int a, int b){
-    return b ? gcd2(b, a%b) : a;
+int gcd(int a, int b){ // a >= b;
+    return b ? gcd(b, a%b) : a;
 }
 double Leibniz_series(){
     double pi = 0;
@@ -118,11 +105,21 @@ int pw(int a, int b, int m){
     }
 }
 
+long long pow(long long x, long long p, int MOD){ // x^p
+    long long ret = 1, piv = x;
+    while(p){
+        if(p&1) ret = ret * piv % MOD;
+        piv = piv * piv % MOD;
+        p >>= 1;
+    }
+    return ret;
+}
+
 long long ceil_div(long long a, long long b){
     return a/b + ((a^b) > 0 && a%b != 0);
 }
 
-void print_bits(int n){
+void print_32bits(int n){
     for(int i=31; i>=0; --i){
         cout << ((n>>i) & 1);
         if(i%8 == 0) cout << " ";

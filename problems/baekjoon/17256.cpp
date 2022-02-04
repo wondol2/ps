@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int a, b, c; cin >> a >> b >> c;
+    int x, y, z; cin >> x >> y >> z;
+    cout << x-c << " " << y/b << " " << z-a << "\n";
 }
 
 

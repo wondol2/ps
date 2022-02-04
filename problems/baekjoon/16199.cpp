@@ -9,7 +9,12 @@ using namespace std;
 
 
 void solve(){
-    
+    int a, b, c; cin >> a >> b >> c;
+    int A, B, C; cin >> A >> B >> C;
+
+    cout << A-a-1 + (B>b?1:(B<b?0:(C>=c?1:0))) << "\n";
+    cout << A-a+1 << "\n";
+    cout << A-a << "\n";
 }
 
 

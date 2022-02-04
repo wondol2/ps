@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    N /= 100;
+    cout << N * 78 << " " << N*80+(N*20/100*78) << "\n";
 }
 
 

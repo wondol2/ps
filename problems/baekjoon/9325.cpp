@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    long long s, n; cin >> s >> n;
+
+    while(n--){
+        int q, p; cin >> q >> p;
+        s += q*p;
+    }
+    cout << s << "\n";
 }
 
 
@@ -18,7 +24,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

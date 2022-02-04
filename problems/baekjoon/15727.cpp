@@ -9,7 +9,8 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    cout << N/5 + (N%5>0?1:0) << "\n";
 }
 
 

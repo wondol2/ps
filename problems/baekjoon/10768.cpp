@@ -9,7 +9,19 @@ using namespace std;
 
 
 void solve(){
-    
+    int m, d; cin >> m >> d;
+    int flag = -2;
+    if(m < 2) flag = -1;
+    else if(m > 2) flag = 1;
+    else{
+        if(d < 18) flag = -1;
+        else if(d > 18) flag = 1;
+        else flag = 0;
+    }
+
+    if(flag == -1) cout << "Before\n";
+    else if(flag == 0) cout << "Special\n";
+    else cout << "After\n";
 }
 
 

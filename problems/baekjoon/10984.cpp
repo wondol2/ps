@@ -9,7 +9,19 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    int a=0;
+    double b=0.0;
+
+    while(N--){
+        int x;
+        double y;
+        cin >> x >> y;
+
+        a += x; b += x*y;
+    }
+    cout.precision(1);
+    cout << a << " " << fixed << b / a << "\n";
 }
 
 
@@ -18,7 +30,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

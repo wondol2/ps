@@ -8,8 +8,9 @@ using namespace std;
 #endif
 
 
-void solve(){
-    
+int solve(){
+    int a, b; cin >> a >> b;
+    return a+b;
 }
 
 
@@ -18,7 +19,9 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
-    while(T--){ solve(); }
+    cin >> T; // cin.ignore(256, '\n');
+    for(int tc=1; tc<=T; ++tc){ 
+        cout << "Case " << tc << ": " << solve() << "\n";
+    }
     return 0;
 }

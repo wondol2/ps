@@ -9,7 +9,20 @@ using namespace std;
 
 
 void solve(){
+    int N; cin >> N;
+    int ans = 0;
+    int addedScore = 0;
     
+    for(int i=0; i<N; ++i){
+        int num; cin >> num;
+        if(num == 0){
+            addedScore = 0;
+            continue;
+        }
+        // num == 1;
+        ans += ++addedScore;
+    }
+    cout << ans << "\n";
 }
 
 

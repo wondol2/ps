@@ -9,7 +9,11 @@ using namespace std;
 
 
 void solve(){
-    
+    double d; cin >> d;
+    d *= 0.8;
+
+    cout.precision(2);
+    cout << fixed << "$" << d << "\n";
 }
 
 
@@ -18,7 +22,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

@@ -9,7 +9,18 @@ using namespace std;
 
 
 void solve(){
-    
+    int arr[4] = {0,1,2,3};
+    int N; cin >> N;
+    while(N--){
+        int a, b; cin >> a >> b;
+        swap(arr[a], arr[b]);
+    }
+    for(int i=1; i<=3; ++i){
+        if(arr[i] == 1){
+            cout << i << "\n";
+            return;
+        }
+    }
 }
 
 

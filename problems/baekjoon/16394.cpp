@@ -9,7 +9,8 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    cout << N-1946 << "\n";
 }
 
 

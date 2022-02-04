@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int L, A, B, C, D; cin >> L >> A >> B >> C >> D;
+
+    cout << L-max(A/C + (A%C>0?1:0), B/D + (B%D>0?1:0)) << "\n";
 }
 
 

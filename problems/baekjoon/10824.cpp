@@ -9,7 +9,17 @@ using namespace std;
 
 
 void solve(){
-    
+    long long a, b, c, d; cin >> a >> b >> c >> d;
+
+    long long t = 1;
+    while(b/t) t*=10;
+    a = a*t + b;
+    t=1;
+    while(d/t) t*=10;
+    c = c*t + d;
+
+    cout << a+c << "\n";
+
 }
 
 

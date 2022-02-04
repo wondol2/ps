@@ -9,6 +9,7 @@ using namespace std;
 
 
 void solve(){
+    int N; cin >> N;
     
 }
 

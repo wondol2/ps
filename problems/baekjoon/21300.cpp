@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int arr[6];
+    for(int i=0; i<6; ++i) cin >> arr[i];
+    cout << accumulate(arr, arr+6, 0)*5 << "\n";
 }
 
 

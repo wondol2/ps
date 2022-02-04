@@ -7,9 +7,18 @@ using namespace std;
 #define debug(x)
 #endif
 
+const int MOD = 45678;
 
 void solve(){
-    
+    int N; cin >> N;
+
+    int ans = 5;
+    int d = 4;
+    for(int i=1; i<N; ++i){
+        ans += d+i*3;
+        ans %= MOD;
+    }
+    cout << ans << "\n";
 }
 
 

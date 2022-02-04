@@ -9,7 +9,8 @@ using namespace std;
 
 
 void solve(){
-    
+    int v, e; cin >> v >> e;
+    cout << 2 + e - v << "\n";
 }
 
 
@@ -18,7 +19,7 @@ int main(){
     cin.tie(0); cout.tie(0);
     cin.exceptions(cin.failbit);
     int T=1;
-    // cin >> T; // cin.ignore(256, '\n');
+    cin >> T; // cin.ignore(256, '\n');
     while(T--){ solve(); }
     return 0;
 }

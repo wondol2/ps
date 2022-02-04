@@ -9,7 +9,12 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+
+    double ans = sqrt(3) * N * N / 4;
+
+    cout.precision(16);
+    cout << fixed << ans << "\n";
 }
 
 

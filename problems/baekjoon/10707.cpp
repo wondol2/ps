@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int A, B, C, D, P; cin >> A >> B >> C >> D >> P;
+
+    cout << min(A*P, B+(C<P?(P-C)*D:0)) << "\n";
 }
 
 

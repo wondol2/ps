@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    int N, W, H; cin >> N >> W >> H;
+    int maxval = sqrt(W*W+H*H);
+    while(N--){
+        int num; cin >> num;
+        if(num<=maxval) cout << "DA\n";
+        else cout << "NE\n";
+    }    
 }
 
 

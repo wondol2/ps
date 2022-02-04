@@ -9,7 +9,20 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+
+    for(int i=1; i<=N; ++i){
+        for(int j=0; j<N-i; ++j){
+            cout << " ";
+        }
+        cout << "*";
+        for(int j=0; j<2*i-3; ++j){
+            cout << " ";
+        }
+        if(i!=1) cout << "*";
+        cout << "\n";
+    }
+
 }
 
 

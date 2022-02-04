@@ -9,7 +9,9 @@ using namespace std;
 
 
 void solve(){
-    
+    int S, T, D; cin >> S >> T >> D;
+
+    cout << T * D/(2*S) << "\n";
 }
 
 

@@ -9,7 +9,13 @@ using namespace std;
 
 
 void solve(){
-    
+    int arr[6];
+    for(int i=0; i<6; ++i) cin >> arr[i];
+    sort(arr, arr+4);
+    sort(arr+4, arr+6);
+
+    cout << accumulate(arr+1, arr+4, 0) + accumulate(arr+5, arr+6, 0) << "\n";
+
 }
 
 
