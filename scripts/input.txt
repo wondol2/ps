@@ -1,17 +1,14 @@
-6 9
-1 4 3 2 5 9
+A*B+C-D/E
+
+A*B+C/D-E
+
+A*(B+C)/D-E
 
 
-
-5 5
-1 2 3 4 5
-
-6 5
-6 5 4 3 2 1
-
-6 5
-6 7 4 3 2 1
+#71: A/B/C-(D*E)/F/G-((H/I)*((J+((K+L)+M+N/O/P/(Q-R*S)-T*(U+(V+(((W+X-Y)))))))))
+answer: AB/C/DE*F/G/-HI/JKL+M+NO/P/QRS*-/+TUVWX+Y-++*-+*-
 
 
-6 5
-6 7 4 3 2 1
+(A-B*(C+D))
+ABCD+*-
+(BCD+*A
