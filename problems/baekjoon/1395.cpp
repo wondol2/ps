@@ -11,7 +11,11 @@ using namespace std;
 
 
 void solve(){
-    
+    int N, M; cin >> N >> M;
+    while(M--){
+        int o, s, t; cin >> o >> s >> t;
+
+    }
 }
 
 

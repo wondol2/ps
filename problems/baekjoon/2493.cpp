@@ -9,9 +9,24 @@ using namespace std;
 #define flush()
 #endif
 
+struct node{int val; int idx;};
 
 void solve(){
+    int N; cin >> N;
+    int arr[N+1]{};
+    for(int i=1; i<=N; ++i) cin >> arr[i];
     
+    stack<node> s;
+    s.push({INT_MAX,0});
+
+    for(int i=1; i<=N; ++i){
+        while(!s.empty() && s.top().val < arr[i]){
+            s.pop();
+        }
+        cout << s.top().idx << " "; flush()
+        s.push({arr[i], i});
+    }
+    cout << "\n";
 }
 
 

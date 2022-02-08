@@ -11,7 +11,21 @@ using namespace std;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    int arr[N+1]{};
+    for(int i=1; i<=N; ++i) cin >> arr[i];
+    arr[0] = 0;
+
+    int dp[N+1]{};
+    dp[0] = 0;
+    for(int i=1; i<=N; ++i){
+        for(int j=0; j<i; ++j){
+            if(arr[i] > arr[j]){
+                dp[i] = max(dp[i], dp[j]+1);
+            }
+        }
+    }
+    cout << N - *max_element(dp+1, dp+N+1) << "\n";
 }
 
 

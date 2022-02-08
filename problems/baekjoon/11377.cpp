@@ -11,7 +11,29 @@ using namespace std;
 
 
 void solve(){
+    int N, M, K; cin >> N >> M >> K;
+
+    vector<vector<int>> v;
+    set<int> work;
+    for(int i=0; i<N; ++i){
+        int n; cin >> n;
+        vector<int> vv;
+        while(n--){
+            int w; cin >> w;
+            vv.push_back(w);
+        }
+        if(vv.size() == 1){
+            work.insert(vv.back());
+        }
+        else{
+            v.push_back(vv);
+        }
+    }
+
     
+
+
+
 }
 
 
