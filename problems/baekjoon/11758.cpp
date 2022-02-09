@@ -11,7 +11,7 @@ using namespace std;
 
 
 void solve(){
-    int x[3], y[3];
+    long long x[3], y[3];
     for(int i=0; i<3; ++i) cin >> x[i] >> y[i];
 
     int ans = 0;
@@ -29,17 +29,42 @@ void solve(){
         }
     }
     else{
-        double a = (double) (y[1]-y[0]) / (x[1]-x[0]);
-        double b = (double) (y[0]*x[1]-y[1]*x[0]) / (x[1]-x[0]);
-        double yy = a*x[2]+b;
+        /*
+        double로 했을시 반례
+        9896 9922
+        9936 9884
+        9916 9903
 
-        // 첫 두점을 잇는 일차방정식으로 나온값(yy)와 주어진 y값 비교
-        // 직선보다 위/아래 에있을시 x좌표 비교를 통한 정답 결정
-        if(yy > y[2]){
+        */
+        // double a = (double) (y[1]-y[0]) / (x[1]-x[0]);
+        // double b = (double) (y[0]*x[1]-y[1]*x[0]) / (x[1]-x[0]);
+        // double yy = a*x[2]+b;
+        // cout << (x[1]-x[0]) << "\n";
+        // debug(a) debug(b) debug(yy)
+        // cout.precision(60);
+        // cout << fixed << a << "\n";
+        // cout << fixed << b << "\n";
+        // cout << fixed << yy << "\n";
+        // if(yy > y[2]){
+        //     if(x[0] < x[1]) ans = -1;
+        //     else ans = 1;
+        // }
+        // else if(yy < y[2]){
+        //     if(x[0] < x[1]) ans = 1;
+        //     else ans = -1;
+        // }
+        // else{
+        //     ans = 0;
+        // }
+        long long aa = y[1]-y[0];
+        long long bb = y[0]*x[1]-y[1]*x[0];
+        long long yy = (aa*x[2]+bb) * (x[1]>x[0]?1:-1);
+
+        if(yy > y[2] * abs(x[1]-x[0])){
             if(x[0] < x[1]) ans = -1;
             else ans = 1;
         }
-        else if(yy < y[2]){
+        else if(yy < y[2] * abs(x[1]-x[0])){
             if(x[0] < x[1]) ans = 1;
             else ans = -1;
         }
