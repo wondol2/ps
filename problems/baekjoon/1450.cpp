@@ -3,27 +3,30 @@ using namespace std;
 
 #ifndef ONLINE_JUDGE
 #include "debug.h"
+#define flush() cout.flush();
 #else
 #define debug(x)
+#define flush()
 #endif
 
-// nice knapsack
 
 void solve(){
-    int N, K; cin >> N >> K;
-    int arr[N+1]{};
-    int dp[K+1]{};
+    int N, C; cin >> N >> C;
+    long long arr[N];
+    for(int i=0; i<N; ++i) cin >> arr[i];
 
-    for(int i=1; i<=N; ++i) cin >> arr[i];
+    sort(arr, arr+N, __greater());
 
-    for(int i=1; i<=N; ++i){
-        if(arr[i] <= K) ++dp[arr[i]];
-        for(int j=1; j<=K; ++j){
-            if(j >= arr[i])
-                dp[j] += dp[j-arr[i]];
-        }
+    long long ans = 0;
+    // long long sum = 0;
+    for(int i=0; i<N; ++i){
+        int j=i;
+        long long sum = 0;
+        
+
     }
-    cout << dp[K] << "\n";
+
+
 }
 
 

@@ -7,44 +7,42 @@ using namespace std;
 #define debug(x)
 #endif
 
-struct node{int idx; int d;};
-
 void solve(){
     int V, E; cin >> V >> E;
-    vector<int> v[V];
+    vector<vector<int>> v(V+1);
 
-    int vis[V]{};
-    queue<node> q;
+    int vis[V+1]{};
+    queue<int> q;
 
     for(int i=0; i<E; ++i){
         int a, b; cin >> a >> b;
-        --a; --b;
         v[a].push_back(b);
         v[b].push_back(a);
-
-        if(!vis[a]){ q.push({a, 1}); vis[a] = 1; }
-        if(!vis[b]){ q.push({b, 1}); vis[b] = 1; }
     }
-    memset(vis, 0, V*4);
 
-    while(!q.empty()){
-        node n = q.front();
-        for(int i=0; i<v[n.idx].size(); ++i){
-            int newidx = v[n.idx][i];
-            if(!vis[newidx]){
-                q.push({newidx, n.d+1});
-                vis[newidx] = 1;
-            }
-            else{
-                if(n.d & 1){
+    for(int i=1; i<=V; ++i){
+        if(vis[i]) continue;
+
+        q.push(i);
+        vis[i] = 1;
+
+        while(!q.empty()){
+            int n = q.front(); q.pop();
+
+            for(int k=0; k<(int)v[n].size(); ++k){
+                int x = v[n][k];
+
+                if(vis[x] == vis[n]){
                     cout << "NO\n"; return;
                 }
+
+                if(vis[x]) continue;
+                q.push(x);
+                vis[x] = -vis[n];
             }
         }
-        q.pop();
     }
     cout << "YES\n";
-
 }
 
 
