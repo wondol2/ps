@@ -65,7 +65,7 @@ void solve(){
         for(int i=0; i<N; ++i){
             memset(vis, 0, sizeof(vis));
             vis[0] = 1, vis[v[0][k]] = 1;
-            if(!dfs(i)) isAnswer = false;
+            if(!dfs(i)) {isAnswer = false; break;}
         }
 
         if(isAnswer) ans.push_back(arr[match[0]]);
