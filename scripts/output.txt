@@ -1,0 +1,133 @@
+babacvabba
+s babacvabba
+m[s] {0,0}
+1 0 abbacvabba
+3 0 aabbcvabba
+6 0 aabacvbbba
+s ababacvabba
+m[s] {1,0}
+3 2 abbaacvabba
+s babacvabbab
+m[s] {1,0}
+s abacvabba
+m[s] {1,0}
+s babacvabb
+m[s] {1,0}
+2 1 bbaacvabb
+s aabacvabba
+m[s] {1,0}
+2 1 abaacvabba
+7 1 abbacvaaba
+s babacvabbb
+m[s] {1,0}
+2 1 bbaacvabbb
+7 1 bbbacvaabb
+s abbacvabba
+m[s] {2,0}
+s baaacvabbb
+m[s] {1,1}
+s aabbcvabba
+m[s] {1,1}
+s aabacvbbba
+m[s] {1,1}
+s babacvaabb
+m[s] {1,1}
+s babacvabab
+m[s] {2,0}
+s abbabacvabba
+m[s] {2,0}
+s ababacvababa
+m[s] {2,0}
+s abbacvabba
+m[s] {2,0}
+s ababacvaba
+m[s] {2,0}
+s abbbacvabba
+m[s] {2,0}
+4 3 abbabcvabba
+s ababacvaaba
+m[s] {2,0}
+4 3 abaabcvaaba
+s abbaacvabba
+m[s] {3,0}
+s ababbcvaaba
+m[s] {2,1}
+s ababacvbaba
+m[s] {3,0}
+s babbacvabbab
+m[s] {2,0}
+s babacvababab
+m[s] {2,0}
+s babcvabbab
+m[s] {2,0}
+s babacvabab
+m[s] {2,0}
+s babbcvabbab
+m[s] {2,0}
+s babacvaabab
+m[s] {2,0}
+s babacvbabab
+m[s] {2,1}
+s abacvababa
+m[s] {2,0}
+s abcvabba
+m[s] {2,0}
+s abacvaba
+m[s] {2,0}
+s abbcvabba
+m[s] {2,0}
+s abacvaaba
+m[s] {2,0}
+s abacvbaba
+m[s] {2,1}
+s bbabacvabb
+m[s] {2,0}
+s bbacvabb
+m[s] {2,0}
+s babacvab
+m[s] {2,0}
+s bbbacvabb
+m[s] {2,0}
+3 2 bbabcvabb
+s babacvaab
+m[s] {2,0}
+3 2 baabcvaab
+s bbaacvabb
+m[s] {3,0}
+s babbcvaab
+m[s] {2,1}
+s babacvbab
+m[s] {3,0}
+s aabacvabbaa
+m[s] {2,0}
+s aabacvaba
+m[s] {2,0}
+2 1 abaacvaba
+s aabacvabaa
+m[s] {2,0}
+s abaacvabba
+m[s] {2,1}
+s aabbcvabaa
+m[s] {2,1}
+s aabacvbbaa
+m[s] {2,1}
+s abbacvaaba
+m[s] {2,1}
+s bbabacvabbb
+m[s] {2,0}
+3 2 bbbaacvabbb
+s bbacvabbb
+m[s] {2,0}
+s bbbacvabbb
+m[s] {2,0}
+s bbaacvabbb
+m[s] {2,1}
+s babbcvabab
+m[s] {2,1}
+s babacvbbab
+m[s] {2,1}
+s bbbacvaabb
+m[s] {2,1}
+s abbavcvabba
+m[s] {3,0}
+3

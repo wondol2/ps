@@ -9,7 +9,14 @@ using namespace std;
 #define flush()
 #endif
 
-const int NUM = 10000;
+
+bool isPalindrome(string str){
+    int strSize = str.size();
+    for(int i=0; i<strSize/2; ++i){
+        if(str[i] != str[strSize-i-1]) return false;
+    }
+    return true;
+}
 
 
 void solve(){

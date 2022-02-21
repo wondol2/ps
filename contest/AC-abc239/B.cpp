@@ -13,7 +13,9 @@ const int NUM = 10000;
 
 
 void solve(){
-    
+    long long N; cin >> N;
+    if(N<0 && N%10 != 0) N -= 10;
+    cout << N/10 << "\n";
 }
 
 

@@ -13,7 +13,10 @@ const int NUM = 10000;
 
 
 void solve(){
-    
+    long long N; cin >> N;
+    cout.precision(6);
+
+    cout << fixed << sqrt(N*(12800000+N)) << "\n";
 }
 
 

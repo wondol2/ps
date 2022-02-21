@@ -9,11 +9,19 @@ using namespace std;
 #define flush()
 #endif
 
-const int NUM = 10000;
+const int NUM = 1000000007;
 
 
 void solve(){
-    
+    int N; cin >> N;
+
+    int fibo[1000001];
+    fibo[0] = 0;
+    fibo[1] = 1;
+    for(int i=2; i<=N; ++i){
+        fibo[i] = (fibo[i-1] + fibo[i-2]) % NUM;
+    }
+    cout << fibo[N] << "\n";
 }
 
 

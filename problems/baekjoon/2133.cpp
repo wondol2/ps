@@ -13,7 +13,21 @@ const int NUM = 10000;
 
 
 void solve(){
-    
+    int N; cin >> N;
+    if(N&1) { cout << "0\n"; return; }
+
+    long long dp[N+1]{};
+    dp[2] = 3;
+
+    for(int i=4; i<=N; i+=2){
+        dp[i] += 2;
+        for(int j=2; j<=i-4; j+=2){
+            dp[i] += dp[j] * 2;
+        }
+        dp[i] += dp[i-2] * 3;
+    }
+
+    cout << dp[N] << "\n";
 }
 
 

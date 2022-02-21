@@ -9,8 +9,6 @@ using namespace std;
 #define flush()
 #endif
 
-const int NUM = 10000;
-
 
 void solve(){
     

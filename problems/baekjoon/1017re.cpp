@@ -26,8 +26,8 @@ int block;
 vector<vector<int>> v(51);
 
 bool dfs(int n){
-    // if(vis[n]) return true;
-    if(n==0 || n==block) return true;
+    if(vis[n]) return true;
+    // if(n==0 || n==block) return true;
     for(int i=0; i < (int) v[n].size(); ++i){
         int x = v[n][i];
         if(vis[x]) continue;

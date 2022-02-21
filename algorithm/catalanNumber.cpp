@@ -9,8 +9,17 @@ using namespace std;
 #define flush()
 #endif
 
-const int NUM = 10000;
+const int NUM = 30;
 
+void catalanNumber(){
+    long long arr[NUM]{};
+    arr[0] = arr[1] = 1;
+    for(int i=2; i<NUM; ++i){
+        for(int j=0; j<i; ++j){
+            arr[i] += arr[j] * arr[i-j-1];
+        }
+    }
+}
 
 void solve(){
     
