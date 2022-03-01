@@ -1,8 +1,3 @@
-/**
- *  Author: wondol
- *  E-mail: wonsuk0227@gmail.com
-**/
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -16,9 +11,20 @@ using namespace std;
 
 const int NUM = 10000;
 
-
 void solve(){
-    
+    int N; cin >> N;
+    int arr[100][100]{};
+    for(int i=0; i<N; ++i){
+        int x, y; cin >> x >> y;
+
+        for(int a=x; a < x+10; ++a){
+            for(int b=y; b < y+10; ++b){
+                arr[a][b] = 1;
+            }
+        }
+    }
+    int* arr2 = (int *)arr;
+    cout << accumulate(arr2, arr2+10000, 0) << "\n";
 }
 
 

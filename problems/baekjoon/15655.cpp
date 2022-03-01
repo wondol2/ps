@@ -16,9 +16,30 @@ using namespace std;
 
 const int NUM = 10000;
 
+int N, M;
+int arr[8];
+vector<int> v;
+
+void dfs(int n){
+    if(v.size() == M){
+        for(auto &x: v) cout << x << " ";
+        cout << "\n";
+        return;
+    }
+
+    for(int i=n; i<N; ++i){
+        v.push_back(arr[i]);
+        dfs(i+1);
+        v.pop_back();
+    }
+}
 
 void solve(){
-    
+    cin >> N >> M;
+    for(int i=0; i<N; ++i) cin >> arr[i];
+    sort(arr, arr+N);
+
+    dfs(0);
 }
 
 

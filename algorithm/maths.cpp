@@ -48,6 +48,7 @@ void sieve_of_eratosthenes(int n){
             prime[j] = 0;
     }
 }
+
 vector<int> sieve(int n){
     int primes[n] = {0,};
     vector<int> pr;
@@ -138,7 +139,6 @@ void solve(){
     
     cout << gcd(12, 18) << '\n';
     cout << gcd(16, 24) << '\n';
-    cout << gcd1(12, 18) << '\n';
     cout << __gcd(12, 18) << '\n';
 }
 
