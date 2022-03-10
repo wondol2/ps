@@ -7,6 +7,8 @@ using namespace std;
 #define debug(x)
 #endif
 
+const int NUM = 10000;
+
 int count_divisors(int n){
     int cnt = 0;
     for(int i=1; i*i<=n; ++i){
@@ -15,27 +17,20 @@ int count_divisors(int n){
             if(n/i != i) ++cnt;
         }
     }
-    return cnt;
-}
+    {
 
-int improved_count_divisors(int n){
-    vector<int> div(n+1);
-    int cnt = 0;
-    for(int i=1; i<=n; ++i){
-        for(int j=i; j<=n; j+=i){
-            ++div[j];
-        }
     }
-    for(int i=1; i<=n; ++i)
-        cout << div[i] << " ";
     return cnt;
 }
-
 bool is_prime(int n){
     for(int i=2; i*i<=n; ++i)
         if(n%i == 0)
             return false;
     return true;
+
+    // "asdfasdfasdf";
+    string s = "asdfasdfasdf";
+    
 }
 
 void sieve_of_eratosthenes(int n){
@@ -84,27 +79,27 @@ void modulo_arithmetics(){
     int a = 156, b = 4, m = 17; // only if m is prime
     int res1 = (a/b) % m;
     a %= m;
-    int inv_b = pw(b, m-2, m); // fermat's little theorem
+    int inv_b = pow(b, m-2, m); // fermat's little theorem
     // int res2 = a*inv_b%m;
     int res2 = a*inv_b%m;
     cout << res1 << " " << res2 << "\n";
 }
 
-int pw(int a, int b, int m){
-    // binary exponentiation / binpow
-    // O(log b)
-    if(b == 0){
-        return a%m;
-    }
-    if(b & 1){
-        int t = pw(a, (b-1)/2, m);
-        return (long long) (t*t%m)*a % m;
-    }
-    else{
-        int t = pw(a, b/2, m);
-        return (long long) t*t % m;
-    }
-}
+// int pw(int a, int b, int m){
+//     // binary exponentiation / binpow
+//     // O(log b)
+//     if(b == 0){
+//         return a%m;
+//     }
+//     if(b & 1){
+//         int t = pw(a, (b-1)/2, m);
+//         return (long long) (t*t%m)*a % m;
+//     }
+//     else{
+//         int t = pw(a, b/2, m);
+//         return (long long) t*t % m;
+//     }
+// }
 
 long long pow(long long x, long long p, int MOD){ // x^p
     long long ret = 1, piv = x;
