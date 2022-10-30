@@ -1,3 +1,9 @@
+#### How to use clipboard at vim to system
+vim --version | grep .xterm_clipboard -o  ==> need to "+xterm_clipboard"
+If "-xterm_clipboard",
+sudo apt purge vim
+sudo apt autoremove
+sudo apt install vim-gnome/vim-gtk3
 
 #### Own the directory you want by using chown:
 sudo chown your_username directory
