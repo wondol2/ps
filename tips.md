@@ -5,6 +5,14 @@ sudo apt purge vim
 sudo apt autoremove
 sudo apt install vim-gnome/vim-gtk3
 
+#### how to save git id/pw
+git config credential.helper store --global
+
+#### how to install ubuntu in termux
+pkg install wget proot
+wget https://raw.githubusercontent.com/MoorDev/termux-ubuntu/master/ubuntu-20.04.shbash ubuntu-20.04.sh
+./start-ubuntu.sh
+
 #### Own the directory you want by using chown:
 sudo chown your_username directory
 
