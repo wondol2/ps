@@ -1,3 +1,6 @@
+#### How to check ubuntu version in terminal commands
+cat /etc/lsb-release
+
 #### How to use clipboard at vim to system
 vim --version | grep .xterm_clipboard -o  ==> need to "+xterm_clipboard"
 If "-xterm_clipboard",
