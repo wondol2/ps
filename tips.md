@@ -10,6 +10,12 @@ git config credential.helper store --global
 
 #### how to install ubuntu in termux
 pkg install wget proot
+
+git clone https://github.com/MFDGaming/ubuntu-in-termux.git
+chmod +x ubuntu.sh
+./ubuntu.sh -y
+./startubuntu.sh
+
 wget https://raw.githubusercontent.com/MoorDev/termux-ubuntu/master/ubuntu-20.04.shbash ubuntu-20.04.sh
 ./start-ubuntu.sh
 
